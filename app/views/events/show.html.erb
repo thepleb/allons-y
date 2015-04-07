@@ -1,0 +1,22 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="pure-g">
+  <div class="pure-u-1-5">
+  </div>
+  <div class-"pure-u-3-5">
+    <h1 id="header"><%= @event.title %></h1>
+
+<div>
+  Starts in about <%= distance_of_time_in_words_to_now(@event.starts) %>
+</div>
+
+  <%= form_for @suggestion, html: { class: "pure-form" } do |f| %>
+    <%= f.text_field :title, placeholder: "Suggestion" %>
+    <%= f.submit "Add Suggestion", class: "pure-button pure-button-primary" %>
+  <% end %>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+</div>
+</div>
