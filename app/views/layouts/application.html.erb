@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AllonsY</title>
+  <title>Allons-y!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+  <div class="pure-menu">
+    <span class="pure-menu-heading">
+    <h3><a href="/">Allons-y!</a></h3>
+  </span>
+  </div>
   <%= yield %>
 
 </body>

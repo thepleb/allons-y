@@ -4,17 +4,21 @@
 <div class="pure-g">
   <div class="pure-u-1-5">
   </div>
-  <div class-"pure-u-3-5">
-    <h1 id="header"><%= @event.title %></h1>
+  <div>
+    <h1 id="header" style="text-align:center;"><%= @event.title + " - " + @event.starts.strftime("%d %B") %></h1>
 
-<div>
-  Starts in about <%= distance_of_time_in_words_to_now(@event.starts) %>
-</div>
+    <h2 style=>Suggestions</h2>
+    <ul style="list-style-type:none; font-size: 2em; font-family: 'Amatic'; line-height: 1.5em;">
+      <% @event.suggestions.each do |suggestion| %>
+        <li><%= suggestion.title %></li>
+      <% end %>
+    </ul>
 
-  <%= form_for @suggestion, html: { class: "pure-form" } do |f| %>
+  <%= form_for ([@event, @event.suggestions.build]), html: { class: "pure-form" } do |f| %>
     <%= f.text_field :title, placeholder: "Suggestion" %>
     <%= f.submit "Add Suggestion", class: "pure-button pure-button-primary" %>
   <% end %>
+  <br>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

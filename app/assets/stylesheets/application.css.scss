@@ -15,6 +15,39 @@
  *= require purecss
  */
 
+.pure-g {
+  letter-spacing: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Amatic';
+}
+
+h1 {
+  font-size: 4em;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1.3em;
+}
+
+h3 {
+  font-size: 2em;
+  margin:5px;
+}
+
+h4 {
+  font-size: 1.7em;
+  line-height: 1.1em;
+}
+
+h5 {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
 @font-face {
     font-family: 'elliot';
     src: url('ElliotSix-webfont.eot');
@@ -28,16 +61,14 @@
 
 }
 
-#header {
-  font-family: "Amatic";
-  font-size: 4em;
-  font-weight: 100;
-  line-height: 3em;
-
-}
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  background-color: white;
+  text-decoration: underline;
 }
 
 a:visited {

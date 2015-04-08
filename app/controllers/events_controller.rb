@@ -12,8 +12,8 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @suggestion = Suggestion.new
-    @suggestions = @event.suggestions.build
+    @suggestions = @event.suggestions
+    # @suggestion = Suggestion.new
   end
 
   # GET /events/new

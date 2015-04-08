@@ -7,15 +7,11 @@
 <h1 id="header">Upcoming Events</h1>
 <ul style="list-style-type: none">
   <% @upcoming_events.each do |event| %>
-    <li style="font-size: 4em; font-family: 'Amatic'; font-weight: 100; line-height:1em;"><%= link_to event.title, event %> - <small style="font-size:.4em; font-color: grey; margin-left:15px; line-height: .5em;">In <strong><%= distance_of_time_in_words_to_now(event.starts) %></strong> from now</small></li>
+    <li><h4><%= link_to event.title, event %> - <%= event.starts.strftime('%d %B') %><h4></li>
   <% end %>
 
   <br>
-  <%= link_to "New Event", new_event_path %>
-  <%= form_for @event, html: { class: "pure-form" } do |f| %>
-    <%= f.text_field :title, html: { placeholder: "Name" } %>
-    <%= f.submit "Add Event", class: "pure-button pure-button-primary" %>
-  <% end %>
+  <%= button_to "New Event", new_event_path, method: :get, class: "pure-button pure-button-primary" %>
     
 </div>
 </div>
