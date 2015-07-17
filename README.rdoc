@@ -1,5 +1,7 @@
 == README
 
+I don't remember what this application is supposed to do, oh yeah, it was going to be my lunch application.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
