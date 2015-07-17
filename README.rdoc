@@ -2,6 +2,8 @@
 
 I don't remember what this application is supposed to do, oh yeah, it was going to be my lunch application.
 
+I wonder how far I got on this, pretty far as I recall.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
